@@ -1,0 +1,96 @@
+.login-container{
+  position: relative;
+  width: 100%;
+  height: 86.8vh;
+  overflow: hidden;
+}
+
+.login-home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.login-submit-form {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  width: 500px;
+  height: 52vh;
+  gap: 1.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(253, 253, 253, 0.388);
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.28);
+}
+
+.login-submit-form input {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.login-submit-form button {
+  padding: 0.7rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.login-submit-form button:hover {
+  background-color: #0056b3;
+}
+.login-submit-form h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #06e097;
+}
+
+.login-error-message {
+  color: red;
+  font-size: 0.9rem;
+}
+.login-input-error {
+  border: 2px solid red;
+  outline: none;
+}
+.login-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-image: url("../image/money3.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  filter: brightness(0.5);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 900px) {
+  .login-home {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .login-image {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    order: -1; /* Makes image appear above the form on mobile */
+  }
+}
+

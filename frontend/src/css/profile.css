@@ -1,0 +1,149 @@
+/* i come to know a important thing that in React doesn't scope CSS files by default so both the css file cannot have the same as in both the css file or it will cause a conflict in both the file */
+
+.profile-page {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 50px;
+}
+
+.image {
+  width: 100%;
+  max-width: 71vw;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.28);
+  padding-right: 20px;
+}
+
+.image img {
+  width: auto;
+  height: 20vh;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.image p {
+  margin-left: 50px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #e9f914;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  width: 72vw;
+  height: 25vh;
+  gap: 1.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.28);
+  text-align: center;
+}
+.profile-info div {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
+}
+
+/* Styled sign out button */
+.profile-page button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-page button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.profile-register {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(1px);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 1000;
+  animation: slideInUp 0.5s ease-out forwards;
+}
+
+.profile-register button {
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.profile-register button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profile-container {
+    gap: 20px;
+  }
+
+  .profile-page {
+    padding: 1rem;
+  }
+
+  .image img,
+  .profile-info {
+    max-width: 90vw;
+  }
+}

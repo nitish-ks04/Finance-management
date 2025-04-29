@@ -1,0 +1,22 @@
+.feat {
+    width: 150px;
+    height: 150px;
+    padding: 0.5rem;
+    background-color: #12ca7d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    filter: blur(4px);
+    opacity: 0.3;
+    transition: all 0.5s ease;
+  }
+  
+  .feat.active {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 2;
+  }
