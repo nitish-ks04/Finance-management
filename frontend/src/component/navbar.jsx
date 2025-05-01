@@ -43,7 +43,7 @@ function Navbar() {
             <Link to="/regis">Sign Up</Link>
           </>
         ) : (
-          <button onClick={handleSignOut}>Sign Out</button>
+          <button onClick={() => navigate("/profile")}>Profile </button>
         )}
       </div>
     </nav>

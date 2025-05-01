@@ -1,19 +1,18 @@
+const mongoose = require("mongoose");
 
-const mongoose =require("mongoose")
-const { data } = require("react-router-dom")
-const userschema=new mongoose.Schema({
-    name:String,
-    phone:String,
-    email:{type:String,unique:true},
-    password:string,
-    expenses :[
+const userschema = new mongoose.Schema({
+    name: String,
+    phone: String,
+    email: { type: String, unique: true },
+    password: String,
+    expenses: [
         {
-        amount:Number,
-        medium:string,
-        category:string,
-        createdat:{type:Date,default:Date.now}
+            amount: Number,
+            medium: String,
+            category: String,
+            createdat: { type: Date, default: Date.now }
         }
     ]
 });
 
-module.export=mongoose.model("user",userschema);
+module.exports = mongoose.model("user", userschema);

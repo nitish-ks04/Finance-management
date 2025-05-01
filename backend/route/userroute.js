@@ -1,7 +1,56 @@
-const express=require("express")
-const routes=express.Router();
-const user=require("../model/user")
+const express = require("express");
+const routes = express.Router();
+const User = require("../model/user");
 
-routes.post("/register",(res,req)=>{
-    
+// Register
+routes.post("/register", async (req, res) => {
+    const { name, phone, email, password } = req.body;
+    try {
+        const newUser = new User({ name, phone, email, password });
+        await newUser.save();
+        res.status(200).json({ message: "User registered successfully" });
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+// Login
+routes.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+    const user = await User.findOne({ email, password });
+    if (!user) {
+        return res.status(401).json({ message: "Invalid credentials" });
+    }
+    res.status(200).json({ message: "Login successful", user });
+});
+
+// Add Expenses
+routes.post("/:email/expenses", async (req, res) => {
+    const { amount, medium, category } = req.body;
+    try {
+        const user = await User.findOne({ email: req.params.email });
+        if (!user) {
+            return res.status(404).json({ error: "User not found" });
+        }
+        user.expenses.push({ amount, medium, category });
+        await user.save();
+        res.status(200).json({ message: "Expenses added", expenses: user.expenses });
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
+routes.get("/:email/history", async (req, res) => {
+    // const { amount, medium, category } = req.body
+    try {
+        const user = await User.findOne({ email: req.params.email });
+        if (!user) {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
+        res.status(200).json({ success: true, data: user.expenses });
+    } catch (error) {
+        return res.status(500).json({ success: false, message: error })
+    }
 })
+
+module.exports = routes;

@@ -15,7 +15,7 @@ mongoose.connect("mongodb://localhost:27017/finance", {
     .then(() => console.log("mongodb connnected"))
     .catch((err) => console.error("mongodb error", err));
 
-const userroutes = require("./routes/userroute");
+const userroutes = require("./route/userroute");
 app.use("/api/users", userroutes);
 
 app.listen(port, () => {
