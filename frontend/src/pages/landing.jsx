@@ -22,8 +22,8 @@ function Landing() {
                 <p>This project focuses on designing, developing, and simulating an optimized fleet management and routing system for the Bangalore Metropolitan Transport Corporation (BMTC). </p>
                 <p>The primary objective is to enhance fleet utilization and improve overall operational efficiency.</p>
                 <div className="landing-buttons">
-                    <button onClick={() => navigate("/regis")}>Register</button>
-                    <button onClick={() => navigate("/login")}>Login</button>
+                    {/* <button onClick={() => navigate("/regis")}>Register</button>
+                    <button onClick={() => navigate("/login")}>Login</button> */}
                 </div>
             </div>
 

@@ -52,7 +52,7 @@ function Home() {
             </div>
             <div className="home-register">
                 <button onClick={() => navigate("/home")}>Home</button>
-                <button onClick={() => navigate("/abo_us")}>Route </button>
+                <button onClick={() => navigate("/abo_us")}>Expense</button>
                 <button onClick={() => navigate("/history")}>History </button>
             </div>
         </div>
