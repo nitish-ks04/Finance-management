@@ -51,7 +51,7 @@ function Profile() {
                 </div>
             </div>
             <button onClick={handleSignOut}>Sign Out</button>
-            <div className="profile-register">
+            <div className="home-register">
                 <button onClick={() => navigate("/home")}>Home</button>
                 <button onClick={() => navigate("/abo_us")}>Route </button>
                 <button onClick={() => navigate("/history")}>History </button>

@@ -27,12 +27,12 @@ function Home() {
                 </div>
             </div>
             <div className="second-lay">
+                <div className="second-illu">
+                    <img src={secondillus} alt="second illustration" />
+                </div>
                 <div className="second-text">
                     <h2>Start making data-driven financial decisions today.</h2>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat pariatur accusamus atque minus suscipit fugit nihil omnis adipisci nobis deleniti dicta aliquid, possimus error officiis.
-                </div>
-                <div className="second-illu">
-                    <img src={secondillus} alt="second illustration" />
                 </div>
             </div>
             <div className="third-lay">
