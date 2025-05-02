@@ -54,7 +54,7 @@ function Profile() {
             <div className="profile-register">
                 <button onClick={() => navigate("/home")}>Home</button>
                 <button onClick={() => navigate("/abo_us")}>Route </button>
-                <button onClick={() => navigate("/profile")}>Profile </button>
+                <button onClick={() => navigate("/history")}>History </button>
             </div>
         </div>
     );

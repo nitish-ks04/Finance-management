@@ -52,7 +52,7 @@
 
 .home-register button {
   padding: 0.6rem 1.2rem;
-  background-color: #007bff;
+  background-color: #00796b;
   color: white;
   border: none;
   border-radius: 6px;
@@ -62,7 +62,7 @@
 }
 
 .home-register button:hover {
-  background-color: #0056b3;
+  background-color: #08564d;
   transform: scale(1.1);
 }
 
