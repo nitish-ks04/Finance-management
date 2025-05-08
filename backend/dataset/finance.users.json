@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "68132a190fb22eb8b19e3e4e"
+  },
+  "name": "Test",
+  "phone": "01234567890",
+  "email": "test@gmail.com",
+  "password": "123",
+  "expenses": [
+    {
+      "amount": 56,
+      "medium": "ca",
+      "category": "food",
+      "_id": {
+        "$oid": "681343769bcfd9e9698d6aac"
+      },
+      "createdat": {
+        "$date": "2025-05-01T09:48:38.482Z"
+      }
+    },
+    {
+      "amount": 56,
+      "medium": "ca",
+      "category": "health",
+      "_id": {
+        "$oid": "6813cf2219b9d1f8d593c364"
+      },
+      "createdat": {
+        "$date": "2025-05-01T19:44:34.721Z"
+      }
+    },
+    {
+      "amount": 234,
+      "medium": "cash",
+      "category": "health",
+      "_id": {
+        "$oid": "681b0fa9875d84dc60fd8ac4"
+      },
+      "createdat": {
+        "$date": "2025-05-07T07:45:45.631Z"
+      }
+    },
+    {
+      "amount": 234,
+      "medium": "upi",
+      "category": "bill",
+      "_id": {
+        "$oid": "681c9313453f2a45297cc0d4"
+      },
+      "createdat": {
+        "$date": "2025-05-08T11:18:43.241Z"
+      }
+    }
+  ],
+  "__v": 8
+}]

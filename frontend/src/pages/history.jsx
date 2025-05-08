@@ -3,10 +3,13 @@ import { useNavigate } from "react-router-dom";
 import axios from "../api/axios";
 import "../css/history.css";
 import { HistoryFilterOptions } from "../component/category";
+import NavButton from "../component/nav_butt";
 
 function History() {
     const [expenses, setExpenses] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const [editMode, seteditMode] = useState(false);
+    const [selectedexpenses, setselectedexpenses] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -39,6 +42,33 @@ function History() {
         return { label, total };
     });
 
+    const handleCheckboxChange = (id) => {
+        setselectedexpenses(prev =>
+            prev.includes(id)
+                ? prev.filter(expenseId => expenseId !== id)
+                : [...prev, id]
+        );
+    };
+
+    const handeldelete = async () => {
+        const currentuser = JSON.parse(localStorage.getItem("currentuser"));
+        if (!currentuser?.email) {
+            alert("Login required");
+            return navigate("/login");
+        }
+        try {
+            await Promise.all(selectedexpenses.map(id => {
+                return axios.delete(`/expenses/${id}?email=${currentuser.email}`)
+            }))
+            setExpenses(prev => prev.filter(exp => !selectedexpenses.includes(exp._id)))
+            setselectedexpenses([])
+            seteditMode(false)
+        }
+        catch (error) {
+            alert("Failed to delete expenses: " + (error.response?.data?.error || error.message));
+        }
+    }
+
     return (
         <div className="history-container">
             <h2>Your Expense History</h2>
@@ -59,12 +89,27 @@ function History() {
                 ))}
             </select>
 
+            <button onClick={() => seteditMode(!editMode)}>
+                {editMode ? "Cancel Edit" : "Edit"}
+            </button>
+            {editMode && selectedexpenses.length > 0 && (
+                <button onClick={handeldelete}>
+                    Deleted selected
+                </button>
+            )}
+
             {filteredExpenses.length === 0 ? (
                 <p>No expenses found.</p>
             ) : (
                 <ul className="expense-list">
                     {filteredExpenses.map((expense, index) => (
                         <li key={index} className="expense-item">
+                            {editMode && (
+                                <input type="checkbox"
+                                    checked={selectedexpenses.includes(expense._id)}
+                                    onChange={() => handleCheckboxChange(expense._id)}
+                                />
+                            )}
                             <strong>Amount:</strong> ₹{expense.amount} |
                             <strong> Medium:</strong> {expense.medium} |
                             <strong> Category:</strong> {expense.category}
@@ -83,11 +128,7 @@ function History() {
                     ))}
                 </ul>
             </div>
-            <div className="home-register">
-                <button onClick={() => navigate("/home")}>Home</button>
-                <button onClick={() => navigate("/abo_us")}>Expense </button>
-                <button onClick={() => navigate("/history")}>History </button>
-            </div>
+            <NavButton />
         </div>
     );
 }

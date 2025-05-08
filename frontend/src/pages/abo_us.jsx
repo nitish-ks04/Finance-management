@@ -1,13 +1,11 @@
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "../css/abo_us.css";
 import { Myoptions } from "../component/category";
 import axios from "../api/axios";
+import NavButton from "../component/nav_butt";
 
 function About_us() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const navigate = useNavigate();
 
   const onSubmit = async (data) => {
     const currentuser = JSON.parse(localStorage.getItem("currentuser"));
@@ -35,11 +33,7 @@ function About_us() {
         {errors.amount && <span className="about-error-message">This field is required</span>}
         <button type="submit">Submit</button>
       </form>
-      <div className="home-register">
-                <button onClick={() => navigate("/home")}>Home</button>
-                <button onClick={() => navigate("/abo_us")}>Expense </button>
-                <button onClick={() => navigate("/history")}>History </button>
-            </div>
+     <NavButton/>
     </div>
   );
 }

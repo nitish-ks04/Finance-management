@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "../css/home.css"
 import Firstillus from "../image/first-illus.png"
 import secondillus from "../image/second-illus.png"
 import Feature from "../component/featureobj";
+import NavButton from "../component/nav_butt";
 function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const navigate = useNavigate();
     const [feature] = useState(["keep record of the expenses", "easy to search your expenses", "Lorem ipsum, dolor sit amet consectetur adipisicing elit.", "Animi, reprehenderit.lorem5"])
 
     const handleNext = () => {
@@ -50,11 +49,7 @@ function Home() {
                     <button className="arrow-btn" onClick={handleNext}>→</button>
                 </div>
             </div>
-            <div className="home-register">
-                <button onClick={() => navigate("/home")}>Home</button>
-                <button onClick={() => navigate("/abo_us")}>Expense</button>
-                <button onClick={() => navigate("/history")}>History </button>
-            </div>
+            <NavButton/>
         </div>
 
     );

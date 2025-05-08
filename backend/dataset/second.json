@@ -1,0 +1,325 @@
+[
+    {
+        "_id": {
+            "$oid": "68132a190fb22eb8b19e3e4e"
+        },
+        "name": "Test",
+        "phone": "01234567890",
+        "email": "test@gmail.com",
+        "password": "123",
+        "expenses": [
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0001"
+                },
+                "amount": 120,
+                "medium": "cash",
+                "category": "food"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0002"
+                },
+                "amount": 75,
+                "medium": "upi",
+                "category": "transport"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0003"
+                },
+                "amount": 450,
+                "medium": "card",
+                "category": "health"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0004"
+                },
+                "amount": 200,
+                "medium": "cash",
+                "category": "entertement"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0005"
+                },
+                "amount": 630,
+                "medium": "netbanking",
+                "category": "bill"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0006"
+                },
+                "amount": 310,
+                "medium": "upi",
+                "category": "food"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0007"
+                },
+                "amount": 90,
+                "medium": "cash",
+                "category": "transport"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0008"
+                },
+                "amount": 270,
+                "medium": "card",
+                "category": "health"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0009"
+                },
+                "amount": 180,
+                "medium": "upi",
+                "category": "entertement"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c000a"
+                },
+                "amount": 580,
+                "medium": "cash",
+                "category": "bill"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c000b"
+                },
+                "amount": 100,
+                "medium": "card",
+                "category": "other"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c000c"
+                },
+                "amount": 95,
+                "medium": "upi",
+                "category": "food"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c000d"
+                },
+                "amount": 120,
+                "medium": "cash",
+                "category": "transport"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c000e"
+                },
+                "amount": 390,
+                "medium": "netbanking",
+                "category": "health"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c000f"
+                },
+                "amount": 240,
+                "medium": "upi",
+                "category": "entertement"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0010"
+                },
+                "amount": 720,
+                "medium": "card",
+                "category": "bill"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0011"
+                },
+                "amount": 160,
+                "medium": "cash",
+                "category": "other"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0012"
+                },
+                "amount": 130,
+                "medium": "upi",
+                "category": "food"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0013"
+                },
+                "amount": 80,
+                "medium": "cash",
+                "category": "transport"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0014"
+                },
+                "amount": 410,
+                "medium": "card",
+                "category": "health"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0015"
+                },
+                "amount": 195,
+                "medium": "upi",
+                "category": "entertement"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0016"
+                },
+                "amount": 655,
+                "medium": "netbanking",
+                "category": "bill"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0017"
+                },
+                "amount": 140,
+                "medium": "cash",
+                "category": "other"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0018"
+                },
+                "amount": 105,
+                "medium": "upi",
+                "category": "food"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0019"
+                },
+                "amount": 115,
+                "medium": "card",
+                "category": "transport"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c001a"
+                },
+                "amount": 320,
+                "medium": "upi",
+                "category": "health"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c001b"
+                },
+                "amount": 210,
+                "medium": "cash",
+                "category": "entertement"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c001c"
+                },
+                "amount": 600,
+                "medium": "card",
+                "category": "bill"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c001d"
+                },
+                "amount": 170,
+                "medium": "netbanking",
+                "category": "other"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c001e"
+                },
+                "amount": 145,
+                "medium": "upi",
+                "category": "food"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c001f"
+                },
+                "amount": 70,
+                "medium": "cash",
+                "category": "transport"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0020"
+                },
+                "amount": 350,
+                "medium": "card",
+                "category": "health"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0021"
+                },
+                "amount": 160,
+                "medium": "upi",
+                "category": "entertement"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0022"
+                },
+                "amount": 770,
+                "medium": "netbanking",
+                "category": "bill"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0023"
+                },
+                "amount": 180,
+                "medium": "card",
+                "category": "other"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0024"
+                },
+                "amount": 150,
+                "medium": "upi",
+                "category": "food"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0025"
+                },
+                "amount": 85,
+                "medium": "cash",
+                "category": "transport"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0026"
+                },
+                "amount": 400,
+                "medium": "card",
+                "category": "health"
+            },
+            {
+                "_id": {
+                    "$oid": "665fb1a1c89a1a1c1a1c0027"
+                },
+                "amount": 250,
+                "medium": "upi",
+                "category": "entertement"
+            }
+        ]
+    }
+]
